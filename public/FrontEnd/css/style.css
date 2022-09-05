@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+
+:root {
+    /*fonts.google*/
+    --Arb-font: 'Cairo', sans-serif;
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+
+    /*Color*/
+    --theme-bg-color: rgba(16 18 27 / 40%);
+    --Red-Orange:#ff5948;
+    --pink: #e5346b;
+    --theme-color: #f9fafb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--sm-font, --Arb-font);
+}
+
+/* ============================================
+    ============== Start Navbar ==============
+=============================================*/
+/* Navbar */
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img{
+    width: 40px;
+}
+
+.navbar-brand span{
+    /* letter-spacing: 2px; */
+    font-family: var(--lg-font, --Arb-font);
+}
+
+.nav-link{
+    color:#000000 !important;
+}
+
+.nav-link:hover, .dropdown-item:hover{
+    color: var(--Red-Orange)!important;
+    background-color: #f8f9fa;
+}
+
+
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Media Queries */
+@media(min-width: 992px){
+    .nav-item, .dropdown-item{
+        border-bottom: none;
+    }
+}
+/* End Navbar */
+
+
+
+/* ---------------------------------------------------------
+------------- Start Header and carousel --------------------
+--------------------------------------------------------- */
+#header{
+    background: linear-gradient(201deg, #121211d1, transparent),
+                url(/FrontEnd/images/bg/Bg-Categories.jpg) top/cover no-repeat fixed;
+    background-position: center;
+    height: 80vh;
+}
+
+/* Button for all site */
+.btn:not(.nav-btns button){
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.btn:not(.nav-btns button):hover{
+    background-color: var(--Red-Orange);
+    color: #fff;
+    border-color: var(--Red-Orange);
+}
+
+/* carousel control next & prev */
+.carousel-control-next, .carousel-control-prev  {
+    background: #ffffff00 !important;
+    border: none;
+}
+
+.carousel-inner h1{
+    font-size: 58px;
+    font-family: var(--lg-font);
+}
+
+.carousel-item .btn{
+    border-color: #fff !important;
+}
+
+.carousel-item .btn:hover{
+    border-color: var(--Red-Orange);
+}
+/* End Header and carousel */
+
+
+/* -------------------------------------------------------------
+------------- Start Categories and Products --------------------
+-------------------------------------------------------------- */
+#products{
+    padding-top: 7rem !important;
+}
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--Red-Orange);
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.row1{
+    display: contents;
+}
+/* Start Button Section */
+.active-filter-btn{
+    background-color: var(--Red-Orange) !important;
+    color: #fff !important;
+    border-color: var(--Red-Orange) !important;
+}
+
+/* Start Section card */
+.categories-img span, .Products-img span{
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.Sale{
+    background-color: var(--Red-Orange);
+}
+
+.star{
+    color: var(--Red-Orange);
+}
+/* End Categories */
+
+
+/* -------------------------------------------
+------------- Start offers --------------------
+------------------------------------------- */
+#offers{
+    background: url(/FrontEnd/images/computer-1373684_1920.jpg) center/cover no-repeat fixed;
+}
+#offers .row{
+    min-height: 60vh;
+}
+.offers-content{
+    line-height: 1.6;
+}
+.offers-content span{
+    font-size: 28px;
+}
+.offers-content h2{
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+.offers-content .btn{
+    border-color: transparent!important;
+}
+/* Media Queries */
+@media(min-width: 375px){
+    .offers-content h2{
+        font-size: 40px;
+    }
+}
+/* End of offers */
+
+
+/* -------------------------------------------------------------------
+-------------- Start Modal Login and register Form -------------------
+--------------------------------------------------------------------*/
+/* Card /Box */
+.card-Transparent {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    font-family: 'Varta', sans-serif;
+    margin-top: 80px;
+}
+
+/* Card Header */
+.card-Transparent .card-header {
+    text-align: center;
+}
+
+.card-Transparent img.avatar {
+    width: 15%;
+}
+
+.card-Transparent .card-header h6{
+    color: #fcd56c;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -3px black;
+	text-transform: uppercase;
+	font-size: 35px;
+    margin: 10px 0px 0px;
+}
+
+/* Start The Input */
+.card-Transparent .input-div{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 45px auto;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+    width: 83%;
+}
+
+/* .input-div.one{
+	margin-top: 0;
+} */
+
+.card-Transparent .input-div > div{
+    position: relative;
+	height: 45px;
+}
+
+/* Start The Icon inside The Form */
+.card-Transparent .icon-form{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-size: 20px;
+}
+
+.card-Transparent .icon-form i{
+	transition: .3s;
+}
+
+/* Start The heading inside The Form */
+.card-Transparent .input-div > div > h5{
+	position: absolute;
+	left: 10px;
+	top: 75%;
+	transform: translateY(-170%);
+	color: rgb(0, 0, 0);
+	font-size: 18px;
+	transition: .3s;
+}
+
+.card-Transparent .form-control:focus{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 9px 11px;
+    font-size: 19px;
+    color: #fff;
+    /* font-family: 'poppins', sans-serif; */
+}
+
+.card-Transparent .custom-select .is-invalid:focus, .card-Transparent .form-control.is-invalid:focus, .card-Transparent .was-validated .custom-select:invalid:focus, .card-Transparent .was-validated .form-control:invalid:focus {
+    border-bottom: 2px solid #ff0019;
+    box-shadow: 0 0 0 0.2rem rgb(220 53 69 / 25%);
+}
+
+
+.card-Transparent .invalid-feedback {
+    margin-top: 4.0rem;
+}
+
+/* Start insert input after and focus the content */
+.card-Transparent .input-div:before, .card-Transparent .input-div:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #ff5948;
+	transition: .4s;
+}
+
+.card-Transparent .input-div:before{
+	right: 50%;
+}
+
+.card-Transparent .input-div:after{
+	left: 50%;
+}
+
+.card-Transparent .input-div.focus:before, .card-Transparent .input-div.focus:after{
+	width: 50%;
+}
+
+.card-Transparent .input-div.focus > div > h5{
+    top: 25px;
+    font-size: 15px;
+}
+
+.card-Transparent .input-div.focus > .icon-form > i{
+	color: #ff5948;
+}
+
+
+.card-Transparent .input-div > div > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 9px 11px;
+    font-size: 19px;
+	color: #fff;
+	/* font-family: 'poppins', sans-serif; */
+}
+
+.card-Transparent .input-div.pass{
+	margin-bottom: 4px;
+}
+
+/* Start Write inside input */
+.card-Transparent input::placeholder {
+	color: #e0b232 !important;
+	font-size: 12px;
+}
+
+
+/* Start Remember Me, ForgotPassword and btn Login */
+
+.card-Transparent .check{
+    margin-left: 110px;
+    color: #e0b232 !important;
+}
+
+.card-Transparent .bn {
+    text-decoration: underline;
+}
+
+.card-Transparent .bn:hover {
+    cursor: pointer;
+}
+
+.card-Transparent .form-check-input {
+    width: 1rem !important;
+    height: 1rem !important;
+    /* margin-top: 5px; */
+}
+
+.RememberForgot{
+    justify-content: space-evenly;
+}
+
+/* btn ForgotPassword */
+.card-Transparent .ForgotPassword{
+    /* color: var(--theme-color)!important; */
+    text-decoration: underline;
+}
+
+.card-Transparent .ForgotPassword:hover{
+    color: var(--Red-Orange)!important;
+    text-decoration: none;
+}
+
+/* Add Zoom Animation */
+.card-Transparent .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+    transform: scale(0);
+    }
+    to {
+    transform: scale(1);
+    }
+}
+/* End Modal Login Form */
+/* Start Button And Modal Login Form */
+/* End Navbar */
+
+/* ------------------------------------------------------
+---------------------- Start Footer ---------------------
+--------------------------------------------------------*/
+footer{
+    /* position: relative; */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(22, 22, 23, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px 30px;
+}
+
+.FooterParagraph{
+    color: black !important;
+    -webkit-text-stroke: medium;
+}
+
+
+
+
+
+
